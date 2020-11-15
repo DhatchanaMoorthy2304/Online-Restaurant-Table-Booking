@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/rest_menu_home"
+        android:title="@string/home"
+        android:icon="@drawable/navigat_home_icon"/>
+    <item
+        android:id="@+id/rest_menu_booked"
+        android:title="@string/booked_details"
+        android:icon="@drawable/navigat_shopping_cart_icon"/>
+    <item
+        android:id="@+id/rest_menu_payment"
+        android:title="@string/list_of_payment_details"
+        android:icon="@drawable/navigat_payment_icon"/>
+    <item
+        android:id="@+id/rest_menu_time_slot"
+        android:title="@string/reserved_time_slot"
+        android:icon="@drawable/navigat_time_slot"/>
+    <item
+        android:id="@+id/rest_menu_profile"
+        android:title="@string/cus_profile"
+        android:icon="@drawable/navigat_person_icon"/>
+</menu>

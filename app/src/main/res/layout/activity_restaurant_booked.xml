@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Restaurant_Booked"
+    android:padding="1dp">
+    <RelativeLayout
+        android:id="@+id/cus_menu_booked_rel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:onClick="rest_booked_back_press"
+                    android:background="@drawable/back_icon"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Booked Details"
+                android:textSize="22sp"
+                android:textStyle="bold">
+            </TextView>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rest_cus_book_card_three"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            android:layout_alignParentRight="true">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#BDB9B9"
+                android:onClick="rest_booked_cancel"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#FB0303"
+                    android:textSize="20sp"/>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rest_cus_book_card_one"
+        android:layout_below="@+id/cus_menu_booked_rel1"
+        android:layout_above="@+id/restaurant_home_navigat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="3dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/res_cus_table_booked_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_border"
+            android:padding="5sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="invisible"
+        android:id="@+id/rest_cus_book_card_two"
+        android:layout_below="@+id/cus_menu_booked_rel1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="3dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rest_cus_food_booked_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_border"
+            android:padding="5sp" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/restaurant_home_navigat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/qq"
+        app:itemIconTint="#281150"
+        app:itemTextColor="#FD1403"
+        app:menu="@menu/rest_menu_navigat" />
+</RelativeLayout>

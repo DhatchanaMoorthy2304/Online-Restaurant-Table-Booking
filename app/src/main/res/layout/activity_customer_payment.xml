@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Customer_Payment"
+    android:background="@color/white"
+    android:padding="1dp">
+    <RelativeLayout
+        android:background="@color/qq"
+        android:id="@+id/cus_menu_booked_rel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:onClick="cus_payment_back_press"
+                    android:background="@drawable/back_icon"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Payment Details"
+                android:textSize="22sp"
+                android:textStyle="bold">
+            </TextView>
+        </LinearLayout>
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/cus_menu_booked_rel1"
+        android:layout_above="@+id/cus_home_navigat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="3dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cus_payment_details_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_border"
+            android:padding="5sp" />
+    </androidx.cardview.widget.CardView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/cus_home_navigat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/qq"
+        app:itemIconTint="#281150"
+        app:itemTextColor="#FD1403"
+        app:menu="@menu/cus_menu_navigat" />
+
+</RelativeLayout>

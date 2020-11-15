@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1040420802584",
+    "firebase_url": "https://restaurant-table-booking-76281.firebaseio.com",
+    "project_id": "restaurant-table-booking-76281",
+    "storage_bucket": "restaurant-table-booking-76281.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040420802584:android:012e0083c571f87d65336d",
+        "android_client_info": {
+          "package_name": "com.restaurent.restaurent_table_booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040420802584-jf52chh56pmbrjioisvfjuqbiujls7v1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.restaurent.restaurent_table_booking",
+            "certificate_hash": "ad56754d967789ca42a94c9d2cd1daf2425b289c"
+          }
+        },
+        {
+          "client_id": "1040420802584-04hk6jbg1qnq72t6ulqbtlajthesrpu4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGQ1z0q9RXwAbxROJ5dvmtCE78WtNTivI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040420802584-04hk6jbg1qnq72t6ulqbtlajthesrpu4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Restaurant_Profile">
+    <ImageView
+        android:id="@+id/rest_pro_imag"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/icon"/>
+    <TextView
+        android:id="@+id/rest_pro_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rest_pro_imag"
+        android:gravity="end"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:onClick="rest_pro_edit"
+        android:textColor="#B53F51"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/edit"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp" />
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/rest_pro_update"
+        android:onClick="rest_pro_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rest_pro_imag"
+        android:gravity="end"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:textColor="#B5683F"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/update"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp" />
+    <RelativeLayout
+        android:id="@+id/rest_pro_rl1"
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/rest_pro_imag">
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/person_icon"
+            android:layout_marginStart="15dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60sp"
+            android:layout_marginStart="60sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:text="@string/name" />
+
+            <TextView
+                android:id="@+id/rest_pro_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/name" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/rest_pro_edit_rl1"
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/rest_pro_imag">
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/person_icon"
+            android:layout_marginStart="15dp" />
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="60sp"
+            android:layout_marginStart="55sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="5dp"
+            app:contentPadding="3dp"
+            app:cardUseCompatPadding="true">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/res"
+                app:startIconTint="#000"
+                app:hintTextColor="#000"
+                android:textColorHint="#000"
+                app:endIconMode="clear_text"
+                app:endIconTint="#000"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxStrokeColor="#000"
+                app:boxBackgroundColor="#fff">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rest_pro_edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rest_pro_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rest_pro_rl1">
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/phone_icon"
+            android:layout_marginStart="15dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60sp"
+            android:layout_marginStart="60sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:text="@string/phone" />
+
+            <TextView
+                android:id="@+id/rest_pro_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/phone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rest_pro_rl3"
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rest_pro_rl2">
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/mail_icon"
+            android:layout_marginStart="15dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60sp"
+            android:layout_marginStart="60sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:text="@string/mail" />
+
+            <TextView
+                android:id="@+id/rest_pro_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/mail" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rest_pro_rl4"
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rest_pro_rl3">
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/upi_money_icon"
+            android:layout_marginStart="15dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60sp"
+            android:layout_marginStart="60sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:text="@string/upi" />
+
+            <TextView
+                android:id="@+id/rest_pro_upi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/upi" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rest_pro_rl5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rest_pro_rl4">
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/location_icon"
+            android:layout_marginStart="15dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60sp"
+            android:layout_marginStart="60sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:text="@string/add" />
+
+            <TextView
+                android:id="@+id/rest_pro_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/add" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/rest_pro_edit_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rest_pro_rl4">
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/location_icon"
+            android:layout_marginStart="15dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60sp"
+            android:layout_marginStart="60sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:text="@string/add" />
+
+            <TextView
+                android:id="@+id/rest_pro_edit_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/add" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/restaurant_home_navigat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/qq"
+        app:itemIconTint="#281150"
+        app:itemTextColor="#FD1403"
+        app:menu="@menu/rest_menu_navigat" />
+</RelativeLayout>
