@@ -221,7 +221,7 @@ public class Restaurant_Payment extends AppCompatActivity {
     }
     private boolean isUpiChecked() {
         if(!upi_Id.equals(rest_upi_id.getEditableText().toString().trim())){
-            upi_databaseReference1.child(key).child("_Restaurant_UPI").setValue(rest_upi_id.getEditableText().toString().trim());
+            upi_databaseReference1.child("_Restaurant_UPI").setValue(rest_upi_id.getEditableText().toString().trim());
             return true;
         }
         else{
